@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-25",
+  "os": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  5\nOn-line CPU(s) list:                     0-4\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      5\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4600.00\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               144 KiB (3 instances)\nL1i cache:                               96 KiB (3 instances)\nL2 cache:                                6 MiB (3 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-4\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n",
+  "cpu_max": "400000 100000",
+  "memory_max": "34359738368",
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "input_sha256": "7630efcd74453761e2c346189ee5ca6c2e348c7d4854f0c89ab10aabee4e0ced",
+  "input_size": [
+    4096,
+    4096
+  ],
+  "warmups": 3,
+  "repeats": 30,
+  "random_seed": 20261025,
+  "flags": "-O3 -std=c++17 -fopenmp -Wall -Wextra -Wpedantic",
+  "openmp_env": {
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PROC_BIND": "close",
+    "OMP_PLACES": "cores",
+    "OMP_WAIT_POLICY": "PASSIVE"
+  },
+  "cpu_stat_before": "usage_usec 51804907\nuser_usec 42956074\nsystem_usec 8848833\nnice_usec 0\nnr_periods 1411\nnr_throttled 13\nthrottled_usec 380293\nnr_bursts 0\nburst_usec 0\n",
+  "cpu_stat_after": "usage_usec 62480659\nuser_usec 53631825\nsystem_usec 8848833\nnice_usec 0\nnr_periods 1484\nnr_throttled 13\nthrottled_usec 380293\nnr_bursts 0\nburst_usec 0\n",
+  "stats": [
+    {
+      "mode": "serial",
+      "threads": 1,
+      "runs": 30,
+      "mean_ms": 65.84978020000334,
+      "std_ms": 10.342410283504075,
+      "min_ms": 57.4500560001,
+      "max_ms": 111.574491,
+      "speedup": 1.0,
+      "efficiency": 1.0
+    },
+    {
+      "mode": "parallel",
+      "threads": 1,
+      "runs": 30,
+      "mean_ms": 64.77126843333333,
+      "std_ms": 7.3039343524693106,
+      "min_ms": 54.151258,
+      "max_ms": 81.743278,
+      "speedup": 1.0166510829995568,
+      "efficiency": 1.0166510829995568
+    },
+    {
+      "mode": "parallel",
+      "threads": 2,
+      "runs": 30,
+      "mean_ms": 37.09710123333333,
+      "std_ms": 7.501357588234198,
+      "min_ms": 28.9499249999,
+      "max_ms": 58.330821,
+      "speedup": 1.7750653827591922,
+      "efficiency": 0.8875326913795961
+    },
+    {
+      "mode": "parallel",
+      "threads": 4,
+      "runs": 30,
+      "mean_ms": 34.07419856666667,
+      "std_ms": 6.032935104849001,
+      "min_ms": 25.615394,
+      "max_ms": 55.29716,
+      "speedup": 1.9325408364680179,
+      "efficiency": 0.48313520911700447
+    }
+  ]
+}

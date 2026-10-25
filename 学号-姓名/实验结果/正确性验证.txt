@@ -1,0 +1,6 @@
+verified team size=1
+verified team size=2
+verified team size=4
+120 measured invocations passed exact comparison
+
+Every timed output compared byte-for-byte with serial reference.
