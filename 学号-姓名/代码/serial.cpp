@@ -1,7 +1,10 @@
 #include "sobel.hpp"
 void sobel_serial(const Image& in,Image& out) {
     check_output(in,out);
-    for(int y=0;y<in.height;++y) sobel_row(in,out,y);
+    sobel_row(in, out, 0);
+    if (in.height > 1) sobel_row(in, out, in.height - 1);
+    for (int task = 0; task < task_count(in, 64); ++task)
+        sobel_block(in, out, task, 64);
 }
 #ifndef SOBEL_LIBRARY
 #include <iostream>

@@ -1,9 +1,6 @@
-g++ -O3 -std=c++17 -fopenmp -Wall -Wextra -Wpedantic serial.cpp io.cpp -o ../../temp/bin/serial
-g++ -O3 -std=c++17 -fopenmp -Wall -Wextra -Wpedantic parallel.cpp io.cpp -o ../../temp/bin/parallel
 g++ -O3 -std=c++17 -fopenmp -Wall -Wextra -Wpedantic -DSOBEL_LIBRARY benchmark.cpp serial.cpp parallel.cpp io.cpp -o ../../temp/bin/benchmark
-g++ -O3 -std=c++17 -fopenmp -Wall -Wextra -Wpedantic -DSOBEL_LIBRARY verify.cpp serial.cpp parallel.cpp io.cpp -o ../../temp/bin/verify
-g++ -O1 -g -std=c++17 -fopenmp -fsanitize=address,undefined -fno-omit-frame-pointer -DSOBEL_LIBRARY verify.cpp serial.cpp parallel.cpp io.cpp -o ../../temp/bin/verify_sanitize
 ../../temp/bin/verify
-140 oracle comparisons + hand-calculated center=24 passed
+g++ -O1 -g -std=c++17 -fopenmp -fsanitize=address,undefined -fno-omit-frame-pointer -DSOBEL_LIBRARY verify.cpp serial.cpp parallel.cpp io.cpp -o ../../temp/bin/verify_sanitize
+2695 oracle comparisons, 2640 diagnostic ownership checks, hand-calculated output=24, 3 invalid arguments passed
 ../../temp/bin/verify_sanitize
-140 oracle comparisons + hand-calculated center=24 passed
+2695 oracle comparisons, 2640 diagnostic ownership checks, hand-calculated output=24, 3 invalid arguments passed

@@ -1,6 +1,5 @@
 verified team size=1
 verified team size=2
 verified team size=4
-120 measured invocations passed exact comparison
-
-Every timed output compared byte-for-byte with serial reference.
+300 timed outputs matched serial exactly
+27 diagnostic calls: every task visited exactly once; teams and pixels matched

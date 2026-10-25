@@ -1,0 +1,20 @@
+usage_usec 176082711
+user_usec 138458121
+system_usec 37624590
+nice_usec 0
+nr_periods 6692
+nr_throttled 63
+throttled_usec 5016134
+nr_bursts 0
+burst_usec 0
+---
+usage_usec 197078941
+user_usec 159454351
+system_usec 37624590
+nice_usec 0
+nr_periods 6822
+nr_throttled 63
+throttled_usec 5016134
+nr_bursts 0
+burst_usec 0
+---
